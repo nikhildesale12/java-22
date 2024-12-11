@@ -1,0 +1,18 @@
+The Foreign Function & Memory API (introduced as an incubator feature in JDK 16 and refined through JDK 20) is expected to become final in JDK 22.
+
+What it does:
+
+This API simplifies the interaction between Java and native code (e.g., C/C++ libraries) by allowing direct access to native memory and native functions without needing to use JNI (Java Native Interface).
+It enables more efficient handling of low-level memory operations and native libraries within Java applications.
+Benefits:
+
+Improved performance by eliminating the overhead of JNI calls and enabling direct access to native code and memory.
+Memory safety: It provides a modern way to interact with memory, avoiding many pitfalls of traditional Java-native integration.
+Simplified integration with native libraries.
+
+
+Example:
+
+try (var memorySegment = MemorySegment.allocateNative(100)) {
+    // Interact with native memory
+}

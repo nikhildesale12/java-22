@@ -1,0 +1,18 @@
+Virtual Threads was first previewed in JDK 19 and refined in JDK 20. In JDK 22, it is expected that Virtual Threads will be finalized, making them fully available for production use.
+
+What it does:
+
+Virtual threads provide a lightweight alternative to traditional threads, enabling millions of concurrent tasks to be executed with a minimal resource footprint.
+Instead of using native OS threads, the JVM manages virtual threads in a much more lightweight and efficient way. This is particularly beneficial for I/O-bound applications (like web servers) and microservices.
+Benefits:
+
+Improved scalability: Virtual threads make it possible to handle millions of concurrent requests, significantly reducing the overhead involved in using traditional threads.
+Simplified concurrency: Developers can write sequential code even when working with highly concurrent systems, avoiding callbacks and complex threading management.
+
+
+Example:
+
+var executor = Executors.newVirtualThreadPerTaskExecutor();
+executor.submit(() -> {
+    System.out.println("Hello from virtual thread!");
+});

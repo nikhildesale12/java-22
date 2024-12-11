@@ -1,0 +1,18 @@
+The Foreign Linker API, which allows Java to link to native code without JNI, is still in the incubator stage in JDK 22.
+
+What it does:
+
+This API allows Java to dynamically call native functions and load native libraries more easily, removing the complexity of using traditional JNI.
+
+Benefits:
+
+Simplifies integration with native libraries by automating the process of function linking and memory management.
+Better performance for applications that require frequent interaction with native code.
+
+Example:
+
+
+// Linking to a native library function using the Foreign Linker API
+Library lib = Linker.load("mylibrary");
+Function func = lib.lookup("nativeFunction");
+func.invoke();

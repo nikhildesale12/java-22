@@ -1,0 +1,22 @@
+Record Patterns were first introduced in JDK 16 and received further refinement in JDK 20. By JDK 22, Record Patterns are expected to be finalized.
+
+What it does:
+
+Record patterns allow for more concise extraction of data from records by using patterns to deconstruct records. This is useful for accessing and manipulating data in immutable types.
+
+Benefits:
+
+Cleaner code: Record patterns allow you to destructure records in one step, reducing boilerplate code.
+More readable code when dealing with immutable data types.
+
+Example:
+
+
+record Person(String name, int age) {}
+
+Person person = new Person("Alice", 30);
+
+// Using Record Pattern
+if (person instanceof Person(String name, int age)) {
+    System.out.println(name + " is " + age + " years old");
+}

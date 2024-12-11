@@ -1,0 +1,15 @@
+1. Virtual Threads (Final): Full support for lightweight virtual threads, enabling scalable concurrency.
+
+2. Pattern Matching for switch (Final): Finalized feature for type and structure matching in switch statements.
+
+3. Record Patterns (Final): Final version of record patterns to destructure and access record data concisely.
+
+4. Structured Concurrency (Preview): Simplified thread management for cleaner and safer concurrent programming.
+
+5. Foreign Function & Memory API (Final): Finalized API for interacting with native code and memory.
+
+6. Foreign Linker API (Incubator): Simplified linking to native code and libraries.
+
+7. JVM & Performance Enhancements: Continued performance improvements, including better garbage collection.
+
+8. JVM Compiler Improvements: Enhancements to the JIT compiler for faster execution.

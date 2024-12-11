@@ -1,0 +1,22 @@
+Pattern Matching for switch is a feature that was introduced as a preview in JDK 17, and is likely to be finalized in JDK 22. The goal is to make switch statements more powerful by allowing patterns (e.g., type patterns) instead of just values.
+
+What it does:
+
+Pattern matching allows you to use patterns in switch statements, making them more expressive and flexible. It allows for matching based on type, structure, and properties, rather than just on simple values.
+Benefits:
+
+Enhanced expressiveness: You can directly match on complex types like classes, records, or even combinations of multiple types.
+Cleaner, more concise code: Reduces the need for type-casting or complex if-else chains when working with different object types.
+Improved type safety: The compiler ensures that the types you're matching against are valid.
+
+
+Example:
+
+static String testSwitch(Object obj) {
+    return switch (obj) {
+        case Integer i -> "Integer: " + i;
+        case String s -> "String: " + s;
+        case Person(String name, int age) -> "Person: " + name + ", " + age;
+        default -> "Unknown";
+    };
+}

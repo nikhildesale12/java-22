@@ -1,0 +1,11 @@
+Every new JDK version brings significant performance improvements for JVM and garbage collection, and Java 22 is expected to continue this trend.
+
+What it does:
+
+Java 22 includes further optimizations for garbage collection, especially for collectors like ZGC (Z Garbage Collector) and Shenandoah GC, which aim to provide low-latency garbage collection and improve the performance of applications with large heaps.
+JVM optimizations might include improvements in startup times, memory footprint, and concurrency.
+
+Benefits:
+
+Faster application startup and lower memory usage, making Java more suitable for resource-constrained environments (e.g., microservices).
+Improved throughput for applications with large data sets.

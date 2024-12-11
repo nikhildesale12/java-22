@@ -1,0 +1,24 @@
+In addition to Virtual Threads, Java 22 may introduce structured concurrency as a preview feature.
+
+What it does:
+
+Structured concurrency simplifies working with multiple threads by providing structured and predictable lifecycle management. It ensures that the tasks started in multiple threads are properly coordinated and cleaned up.
+It makes multithreading easier by providing better APIs for managing concurrency, including handling thread groups and task lifecycles.
+
+Benefits:
+
+Improved thread management: Simplifies writing correct, maintainable multi-threaded code by ensuring that threads are automatically and correctly cleaned up.
+Predictable code behavior: It avoids common issues like thread leaks, where threads are not properly shut down, causing resource exhaustion.
+
+Example:
+
+
+try (var scope = new StructuredScope()) {
+    scope.fork(() -> {
+        // Task 1
+    });
+    scope.fork(() -> {
+        // Task 2
+    });
+    scope.join(); // Wait for tasks to complete
+}
